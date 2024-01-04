@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}All Posts{% endblock %}
+
+{% block content %}
+    <h2>All Posts</h2>
+ 
+    <ul class="post-list">
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post' post.id %}">
+                    <h3>{{ post.title }}</h3>
+                </a>
+                <p>{{ post.timestamp }}</p>
+                <p>{{ post.author }}</p>
+                <p>{{ post.content|truncatechars:200 }}</p>
+            <a href="{% url 'post' post.id %}">Interested??</a>
+            </li>
+        {% empty %}
+            <p>No posts found.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/allposts.css' %}">
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome to My Blog</h2>
+    
+    <div class="content">
+        <h3>Recent Posts</h3>
+        <ul>
+            {% for post in recent_posts %}
+                <li>
+                    <h4><a href="{% url 'post' post.pk %}">{{ post.title }}</a></h4>
+                    <p>{{ post.content|truncatechars:200 }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

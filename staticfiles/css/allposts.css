@@ -1,0 +1,21 @@
+/* Add styles for the post list */
+.post-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.post-list li {
+    background-color: #555; /* Dark gray list item background color */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.post-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.post-list a:hover {
+    text-decoration: underline;
+}

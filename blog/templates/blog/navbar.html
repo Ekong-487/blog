@@ -1,0 +1,15 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'all_posts' %}">All Posts</a></li>
+        <li><a href="{% url 'create_post' %}">Create Post</a></li>
+        </ul>
+          <!-- Search Bar -->
+{% block search %}
+<!-- Search Form -->
+<form method="GET" action="{% url 'search_posts' %}">
+<input type="text" name="query" placeholder="Search...">
+<button type="submit">Search</button>
+</form>
+{% endblock %}
+</nav>

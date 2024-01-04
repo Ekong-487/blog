@@ -1,0 +1,14 @@
+/* Add styles for the single post page */
+.single-post {
+    background-color: #555; /* Dark gray background color */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.single-post h2 {
+    color: #fff;
+}
+
+.single-post p {
+    color: #ddd; /* Light gray text color */
+}
